@@ -7,11 +7,11 @@ def caecar(text, shift, direction):
             if char in alphabet:
                 original_position = alphabet.index(char)
                 encrypt_position = original_position + number_shift
+                if encrypt_position > 26:
+                    encrypt_position = encrypt_position % 26
                 encrypt_txt += alphabet[encrypt_position]
             else:
                 encrypt_txt += char
-            if encrypt_position > 26:
-                encrypt_position = encrypt_position % 26
         print(encrypt_txt)
 
     def decoded(encrypted_text, number_shift):

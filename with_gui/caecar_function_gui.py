@@ -8,12 +8,12 @@ def encrypt(original_text, number_shift):
         if char in alphabet:
             original_position = alphabet.index(char)
             encrypt_position = original_position + number_shift
+            while encrypt_position >= 26:
+                encrypt_position = encrypt_position % 26
             encrypt_txt += alphabet[encrypt_position]
         else:
             encrypt_txt += char
-        if encrypt_position > 26:
-            encrypt_position = encrypt_position % 26
-    print(encrypt_txt)
+    # print(encrypt_txt)
     return encrypt_txt
 
 
@@ -23,12 +23,12 @@ def decoded(encrypted_text, number_shift):
         if char in alphabet:
             encrypted_position = alphabet.index(char)
             unencrypted_position = encrypted_position - number_shift
-            if unencrypted_position < 0:
+            while unencrypted_position < 0:
                 unencrypted_position = unencrypted_position + 26
             unencrypted_txt += alphabet[unencrypted_position]
         else:
             unencrypted_txt += char
-    print(unencrypted_txt)
+    # print(unencrypted_txt)
     return unencrypted_txt
 
 
