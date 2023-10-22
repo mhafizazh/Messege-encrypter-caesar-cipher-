@@ -52,7 +52,7 @@ def decrypt_input():
     try:
         words = text_box.get("1.0", tk.END)
         shift = int(shift_number_input.get("1.0", tk.END))
-        decrypted_text = caecar_function_gui.decoded(encrypted_text=words, number_shift=shift)
+        decrypted_text = caecar_function_gui.decoded(encrypted_text=words, shift=shift)
 
         # Check if decrypted_text is None and convert to an empty string if needed
         if decrypted_text is None:
