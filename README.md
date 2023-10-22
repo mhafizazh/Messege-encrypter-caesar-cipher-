@@ -14,6 +14,11 @@
 <h2>Watch the demo!👇</h2>
 https://youtu.be/LsgMHY-M-JE
 
+<h2>Update 1.0.1:</h2>
+<ul>
+  <li>Fixed Capitalization bug</li>
+</ul>
+
 <h2>Contact Information</h2>
 <li>
     <a href="https://github.com/mhafizazh">Muhammad Hafiz Azhari</a>
